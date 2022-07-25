@@ -1,0 +1,12 @@
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\bin\Debug\net5.0\OneCode.HRIS.Models.deps.json
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\bin\Debug\net5.0\OneCode.HRIS.Models.dll
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\bin\Debug\net5.0\ref\OneCode.HRIS.Models.dll
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\bin\Debug\net5.0\OneCode.HRIS.Models.pdb
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.csproj.AssemblyReference.cache
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.AssemblyInfo.cs
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.csproj.CoreCompileInputs.cache
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.dll
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\ref\OneCode.HRIS.Models.dll
+C:\Users\acer\Documents\Ummi Zakiyah Ibrati\.Net API CRUD\project\OneCodeHris\BackEnd\OneCode.HRIS.Models\obj\Debug\net5.0\OneCode.HRIS.Models.pdb
