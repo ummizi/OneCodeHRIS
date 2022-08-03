@@ -13,7 +13,8 @@ import { EmployeeDocumentComponent } from './employee-document/employee-document
 import { FacilityComponent } from './facility/facility.component';
 import { TransportationComponent } from './transportation/transportation.component';
 import { InputDataComponent } from './input-data/input-data.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,11 @@ import { InputDataComponent } from './input-data/input-data.component';
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule
+    EmployeeRoutingModule,
+    HttpClientModule,
+    ToastrModule.forRoot({
+      positionClass :'toast-bottom-right'
+    })
   ]
 })
 export class EmployeeModule { }

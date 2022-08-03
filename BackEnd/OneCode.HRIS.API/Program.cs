@@ -7,9 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using OneCode.HRIS.Models;
-using OneCode.HRIS.Models.Employee;
-using OneCode.HRIS.Models.Setup;
 using System.Net.Http;
+using OneCode.HRIS.Models.EmployeeModels;
 
 namespace OneCode.HRIS.API
 {
@@ -20,10 +19,10 @@ namespace OneCode.HRIS.API
 
         public static void Main(string[] args)
         {
-            PersonalData personalData = new PersonalData();
+            TransactionPersonalData personalData = new TransactionPersonalData();
             personalData.Id = Guid.NewGuid();
 
-            AddressType addressType = new AddressType();
+            MasterAddressType addressType = new MasterAddressType();
             addressType.Id = Guid.NewGuid();
 
             CreateHostBuilder(args).Build().Run();

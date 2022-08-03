@@ -20,6 +20,7 @@ namespace OneCode.HRIS.Models.EmployeeModels
         public string StatusDelete { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
+        public bool? IsMultiple { get; set; }
 
         public virtual ICollection<TransactionDocument> TransactionDocuments { get; set; }
     }

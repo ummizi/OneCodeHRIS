@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using OneCode.HRIS.Models.Employee;
-using OneCode.HRIS.Models.Setup;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using OneCode.HRIS.Models.EmployeeModels;
+using System.IO;
+using System.Net.Http.Headers;
 
 namespace OneCode.HRIS.API.Controllers
 {
@@ -97,5 +97,36 @@ namespace OneCode.HRIS.API.Controllers
                 return NotFound();
             }
         }
+
+        //[HttpPost, DisableRequestSizeLimit]
+        //public async Task<IActionResult> Upload()
+        //{
+        //    try
+        //    {
+        //        var formCollection = await Request.ReadFormAsync();
+        //        var file = formCollection.Files.First();
+        //        var folderName = Path.Combine("Resource", "Files");
+        //        var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+        //        if (file.Length > 0)
+        //        {
+        //            var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+        //            var fullPath = Path.Combine(pathToSave, fileName);
+        //            var dbPath = Path.Combine(folderName, fileName);
+        //            using (var stream = new FileStream(fullPath, FileMode.Create))
+        //            {
+        //                file.CopyTo(stream);
+        //            }
+        //            return Ok();
+        //        }
+        //        else
+        //        {
+        //            return BadRequest();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return StatusCode(500, $"Internal Serve Error: {ex}");
+        //    }
+        //}
     }
 }

@@ -6,8 +6,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using OneCode.HRIS.Models.Employee;
-using OneCode.HRIS.Models.Setup;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 using OneCode.HRIS.Models.EmployeeModels;
 

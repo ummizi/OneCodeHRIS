@@ -18,16 +18,21 @@ namespace OneCode.HRIS.Models.EmployeeModels
         }
 
         public virtual DbSet<MasterAddressType> MasterAddressTypes { get; set; }
+        public virtual DbSet<MasterBloodType> MasterBloodTypes { get; set; }
         public virtual DbSet<MasterContactType> MasterContactTypes { get; set; }
         public virtual DbSet<MasterDocumentType> MasterDocumentTypes { get; set; }
         public virtual DbSet<MasterEmailType> MasterEmailTypes { get; set; }
+        public virtual DbSet<MasterEmployeePosition> MasterEmployeePositions { get; set; }
+        public virtual DbSet<MasterEmployementStatus> MasterEmployementStatuses { get; set; }
         public virtual DbSet<MasterFacilityType> MasterFacilityTypes { get; set; }
         public virtual DbSet<MasterFileType> MasterFileTypes { get; set; }
+        public virtual DbSet<MasterGenderType> MasterGenderTypes { get; set; }
         public virtual DbSet<MasterIdentity> MasterIdentities { get; set; }
         public virtual DbSet<MasterMaritalStatus> MasterMaritalStatuses { get; set; }
         public virtual DbSet<MasterRelationType> MasterRelationTypes { get; set; }
         public virtual DbSet<MasterSpecialCaseType> MasterSpecialCaseTypes { get; set; }
         public virtual DbSet<MasterTransportationType> MasterTransportationTypes { get; set; }
+        public virtual DbSet<MasterUser> MasterUsers { get; set; }
         public virtual DbSet<TransactionAddress> TransactionAddresses { get; set; }
         public virtual DbSet<TransactionBankAccount> TransactionBankAccounts { get; set; }
         public virtual DbSet<TransactionDocument> TransactionDocuments { get; set; }
@@ -45,9 +50,8 @@ namespace OneCode.HRIS.Models.EmployeeModels
         {
             if (!optionsBuilder.IsConfigured)
             {
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=LAPTOP-CK1QGGA6;Database=Employee;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=True;");
-               
-                //optionsBuilder.UseSqlServer("Name=DbConnection");
             }
         }
 
@@ -72,6 +76,23 @@ namespace OneCode.HRIS.Models.EmployeeModels
                 entity.Property(e => e.UpdatedBy).HasMaxLength(100);
 
                 entity.Property(e => e.UpdatedDate).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<MasterBloodType>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Master.BloodType");
+
+                entity.Property(e => e.BloodName).HasMaxLength(50);
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.StatusDelete).HasMaxLength(50);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(100);
             });
 
             modelBuilder.Entity<MasterContactType>(entity =>
@@ -125,6 +146,40 @@ namespace OneCode.HRIS.Models.EmployeeModels
                 entity.Property(e => e.UpdatedBy).HasMaxLength(100);
             });
 
+            modelBuilder.Entity<MasterEmployeePosition>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Master.EmployeePosition");
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.PositionName).HasMaxLength(100);
+
+                entity.Property(e => e.StatusDelete).HasMaxLength(50);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<MasterEmployementStatus>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Master.EmployementStatus");
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.StatusDelete).HasMaxLength(50);
+
+                entity.Property(e => e.StatusName).HasMaxLength(100);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            });
+
             modelBuilder.Entity<MasterFacilityType>(entity =>
             {
                 entity.ToTable("Master.FacilityType");
@@ -155,6 +210,23 @@ namespace OneCode.HRIS.Models.EmployeeModels
                 entity.Property(e => e.StatusDelete).HasMaxLength(50);
 
                 entity.Property(e => e.Type).HasMaxLength(25);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<MasterGenderType>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("Master.GenderType");
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.Gender).HasMaxLength(50);
+
+                entity.Property(e => e.StatusDelete).HasMaxLength(50);
 
                 entity.Property(e => e.UpdatedBy).HasMaxLength(100);
             });
@@ -242,6 +314,27 @@ namespace OneCode.HRIS.Models.EmployeeModels
                 entity.Property(e => e.Type).HasMaxLength(20);
 
                 entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<MasterUser>(entity =>
+            {
+                entity.ToTable("Master.User");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.CreatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.Description).HasMaxLength(200);
+
+                entity.Property(e => e.Password).HasMaxLength(50);
+
+                entity.Property(e => e.StatusDelete).HasMaxLength(50);
+
+                entity.Property(e => e.UpdatedBy).HasMaxLength(100);
+
+                entity.Property(e => e.UserGroupId).HasMaxLength(50);
+
+                entity.Property(e => e.UserName).HasMaxLength(50);
             });
 
             modelBuilder.Entity<TransactionAddress>(entity =>
@@ -543,7 +636,6 @@ namespace OneCode.HRIS.Models.EmployeeModels
                 entity.HasOne(d => d.MaritalStatus)
                     .WithMany(p => p.TransactionPersonalData)
                     .HasForeignKey(d => d.MaritalStatusId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Transaction.PersonalData_Master.MaritalStatus");
             });
 

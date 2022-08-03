@@ -27,7 +27,7 @@ namespace OneCode.HRIS.Models.EmployeeModels
         public DateTime? UpdatedDate { get; set; }
         public string StatusDelete { get; set; }
         public string Description { get; set; }
-        public Guid MaritalStatusId { get; set; }
+        public Guid? MaritalStatusId { get; set; }
         public string Nik { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

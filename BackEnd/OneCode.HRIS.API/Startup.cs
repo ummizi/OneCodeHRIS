@@ -30,8 +30,7 @@ namespace OneCode.HRIS.API
         {
 
             services.AddControllers().AddNewtonsoftJson(options =>
-            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-);
+            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OneCode.HRIS.API", Version = "v1" });
@@ -57,6 +56,11 @@ namespace OneCode.HRIS.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("../swagger/v1/swagger.json", "OneCode.HRIS.API v1"));
             }
 
+            app.UseCors(x => x
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -65,7 +69,10 @@ namespace OneCode.HRIS.API
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "Default",
+                    pattern: "{controller}/{action}/{id?}");
             });
         }
     }
