@@ -17,8 +17,8 @@ export class MixedWidget3Component implements OnInit {
 }
 
 function getChartOptions(chartHeight: string) {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
 
   return {
     series: [

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { HorizontalComponent } from './horizontal/horizontal.component';
 import { VerticalComponent } from './vertical/vertical.component';
@@ -12,6 +12,10 @@ import { Step2Component } from './steps/step2/step2.component';
 import { Step3Component } from './steps/step3/step3.component';
 import { Step4Component } from './steps/step4/step4.component';
 import { Step5Component } from './steps/step5/step5.component';
+import { Step6Component } from './steps/step6/step6.component';
+import { Step7Component } from './steps/step7/step7.component';
+import { Step8Component } from './steps/step8/step8.component';
+import { Step9Component } from './steps/step9/step9.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { Step5Component } from './steps/step5/step5.component';
     Step3Component,
     Step4Component,
     Step5Component,
+    Step6Component,
+    Step7Component,
+    Step8Component,
+    Step9Component,
   ],
   imports: [
     CommonModule,
@@ -30,6 +38,7 @@ import { Step5Component } from './steps/step5/step5.component';
     ReactiveFormsModule,
     InlineSVGModule,
     NgbTooltipModule,
+    FormsModule
   ],
 })
 export class WizardsModule {}

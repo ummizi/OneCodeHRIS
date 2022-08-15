@@ -8,7 +8,7 @@ export class UsersTable {
       authToken: 'auth-token-8f3ae836da744329a6f93bf20594b5cc',
       refreshToken: 'auth-token-f8c137a2c98743f48b643e71161d90aa',
       roles: [1], // Administrator
-      pic: './assets/media/avatars/150-2.jpg',
+      pic: './assets/media/avatars/300-1.jpg',
       fullname: 'Sean S',
       firstname: 'Sean',
       lastname: 'Stark',
@@ -63,7 +63,7 @@ export class UsersTable {
       authToken: 'auth-token-6829bba69dd3421d8762-991e9e806dbf',
       refreshToken: 'auth-token-f8e4c61a318e4d618b6c199ef96b9e55',
       roles: [2], // Manager
-      pic: './assets/media/avatars/150-1.jpg',
+      pic: './assets/media/avatars/300-6.jpg',
       fullname: 'Megan F',
       firstname: 'Megan',
       lastname: 'Fox',
@@ -117,7 +117,7 @@ export class UsersTable {
       authToken: 'auth-token-d2dff7b82f784de584b60964abbe45b9',
       refreshToken: 'auth-token-c999ccfe74aa40d0aa1a64c5e620c1a5',
       roles: [3], // Guest
-      pic: './assets/media/avatars/150-5.jpg',
+      pic: './assets/media/avatars/300-20.jpg',
       fullname: 'Manu G',
       firstname: 'Manu',
       lastname: 'Ginobili',

@@ -1,0 +1,43 @@
+<div class="pb-10 pb-lg-15">
+    <h2 class="fw-bolder d-flex align-items-center text-dark">
+      Transportation Used
+      <i
+        class="fas fa-exclamation-circle ms-2 fs-7"
+        ngbTooltip="Insert the personal of employee data"
+      ></i>
+    </h2>
+  
+  </div>
+  
+  <div class="fv-row" [formGroup]="form">
+    <div class="row">
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+          <label class="form-label required">Transportation Type</label
+          ><select
+            name="businessType"
+            class="form-select form-select-lg form-select-solid"
+            formControlName="genderType"
+          >
+            <option value="1">Motorcycle</option>
+            <option value="1">Car</option>
+            
+          </select>
+        </div>
+        <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">Police Number</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      </div>
+      <!--end::Col-->
+      <div class="fv-plugins-message-container invalid-feedback">
+        <!-- <ErrorMessage name='accountType' /> -->
+      </div>
+    </div>
+  </div>
+  

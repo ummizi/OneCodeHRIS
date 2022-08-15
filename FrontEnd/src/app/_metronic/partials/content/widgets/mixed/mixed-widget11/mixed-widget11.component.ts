@@ -17,10 +17,10 @@ export class MixedWidget11Component implements OnInit {
 }
 
 function getChartOptions(chartHeight: string, chartColor: string) {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
-  const secondaryColor = getCSSVariableValue('--bs-gray-300');
-  const baseColor = getCSSVariableValue('--bs-' + chartColor);
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
+  const secondaryColor = getCSSVariableValue('--kt-gray-300');
+  const baseColor = getCSSVariableValue('--kt-' + chartColor);
 
   return {
     series: [

@@ -1,0 +1,47 @@
+<div class="pb-10 pb-lg-15">
+    <h2 class="fw-bolder d-flex align-items-center text-dark">
+        Insurance
+      <i
+        class="fas fa-exclamation-circle ms-2 fs-7"
+        ngbTooltip="Insert the personal of employee data"
+      ></i>
+    </h2>
+  
+  </div>
+  
+  <div class="fv-row" [formGroup]="form">
+    <div class="row">
+        <div class="row mb-5">
+        <div class="col-md-3 ">
+            <label class=" fs-5 fw-bold mb-1">BPJS Kesehatan</label>
+        </div>
+        <div class="col-md-6 fv-row">
+          <label class="required fs-5 fw-bold mb-2">Insurance Number</label>
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+      </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-3 ">
+            <label class=" fs-5 fw-bold mb-1">BPJS Ketenagakerjaan</label>
+        </div>
+        <div class="col-md-6 fv-row">
+          <label class="required fs-5 fw-bold mb-2">Insurance Number</label>
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+      </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-3 ">
+            <label class=" fs-5 fw-bold mb-1">NPWP</label>
+        </div>
+        <div class="col-md-6 fv-row">
+          <label class="required fs-5 fw-bold mb-2">NPWP Number</label>
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+      </div>
+      </div>
+      <!--end::Col-->
+      <div class="fv-plugins-message-container invalid-feedback">
+        <!-- <ErrorMessage name='accountType' /> -->
+      </div>
+    </div>
+  </div>
+  

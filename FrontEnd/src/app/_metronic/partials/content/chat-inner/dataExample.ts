@@ -80,7 +80,7 @@ interface UserInfoModel {
 const defaultUserInfos: Array<UserInfoModel> = [
   {
     name: 'Emma Smith',
-    avatar: 'avatars/150-1.jpg',
+    avatar: 'avatars/300-6.jpg',
     email: 'e.smith@kpmg.com.au',
     position: 'Art Director',
     online: false,
@@ -94,21 +94,21 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'Max Smith',
-    avatar: 'avatars/150-2.jpg',
+    avatar: 'avatars/300-1.jpg',
     email: 'max@kt.com',
     position: 'Software Enginer',
     online: false,
   },
   {
     name: 'Sean Bean',
-    avatar: 'avatars/150-4.jpg',
+    avatar: 'avatars/300-5.jpg',
     email: 'sean@dellito.com',
     position: 'Web Developer',
     online: false,
   },
   {
     name: 'Brian Cox',
-    avatar: 'avatars/150-15.jpg',
+    avatar: 'avatars/300-25.jpg',
     email: 'brian@exchange.com',
     position: 'UI/UX Designer',
     online: false,
@@ -122,7 +122,7 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'Francis Mitcham',
-    avatar: 'avatars/150-8.jpg',
+    avatar: 'avatars/300-9.jpg',
     email: 'f.mitcham@kpmg.com.au',
     position: 'Software Arcitect',
     online: false,
@@ -144,7 +144,7 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'Dan Wilson',
-    avatar: 'avatars/150-6.jpg',
+    avatar: 'avatars/300-23.jpg',
     email: 'dam@consilting.com',
     position: 'Web Desinger',
     online: false,
@@ -158,7 +158,7 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'Ana Crown',
-    avatar: 'avatars/150-7.jpg',
+    avatar: 'avatars/300-12.jpg',
     email: 'ana.cf@limtel.com',
     position: 'Customer Relationship',
     online: false,
@@ -172,7 +172,7 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'John Miller',
-    avatar: 'avatars/150-17.jpg',
+    avatar: 'avatars/300-13.jpg',
     email: 'miller@mapple.com',
     position: 'Project Manager',
     online: false,
@@ -186,7 +186,7 @@ const defaultUserInfos: Array<UserInfoModel> = [
   },
   {
     name: 'Ethan Wilder',
-    avatar: 'avatars/150-10.jpg',
+    avatar: 'avatars/300-21.jpg',
     email: 'ethan@loop.com.au',
     position: 'Accountant',
     online: true,

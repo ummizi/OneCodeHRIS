@@ -1,0 +1,35 @@
+<div class="pb-10 pb-lg-15">
+  <h2 class="fw-bolder d-flex align-items-center text-dark">
+    Employee Document
+    <i
+      class="fas fa-exclamation-circle ms-2 fs-7"
+      ngbTooltip="Insert the personal of employee data"
+    ></i>
+  </h2>
+
+</div>
+
+<div class="fv-row" [formGroup]="form">
+  <div class="row"> 
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-3 fv-row">
+        <label class="form-label required">Document Type</label
+        ><select
+          name="businessType"
+          class="form-select form-select-lg form-select-solid"
+          formControlName="genderType"
+        >
+          <option value="1">CV</option>
+          <option value="1">SIM</option>
+          
+        </select>
+      </div>
+      
+    </div>
+    <!--end::Col-->
+    <div class="fv-plugins-message-container invalid-feedback">
+      <!-- <ErrorMessage name='accountType' /> -->
+    </div>
+  </div>
+</div>

@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-invite-users-modal',
   templateUrl: './invite-users-modal.component.html',
 })
-export class InviteUsersModalComponent implements OnInit {
+export class InviteUsersModalComponent {
   constructor() {}
-
-  ngOnInit(): void {}
 }

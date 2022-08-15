@@ -1,97 +1,187 @@
-<div class="pb-10 pb-lg-12">
-  <h2 class="fw-bolder text-dark">Business Details</h2>
-  <div class="text-gray-400 fw-bold fs-6">
-    If you need more info, please check out
-    <a href="#" class="link-primary fw-bolder">Help Page</a>.
-  </div>
+<div class="pb-10 pb-lg-15">
+  <h2 class="fw-bolder d-flex align-items-center text-dark">
+    Address Based on ID Card
+    <i
+      class="fas fa-exclamation-circle ms-2 fs-7"
+      ngbTooltip="Insert the address of employee data"
+    ></i>
+  </h2>
+
 </div>
-<div [formGroup]="form">
-  <div class="fv-row mb-10">
-    <label class="form-label required">Business Name</label
-    ><input
-      name="businessName"
-      class="form-control form-control-lg form-control-solid"
-      formControlName="businessName"
-    />
-    <div
-      class="fv-plugins-message-container invalid-feedback"
-      *ngIf="
-        form.get('businessName')?.hasError('required') &&
-        form.get('businessName')?.touched
-      "
-    >
-      Business Name is required
+
+<div class="fv-row" [formGroup]="form">
+  <div class="row">
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">Street Name</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
     </div>
-  </div>
-  <div class="fv-row mb-10">
-    <label class="d-flex align-items-center form-label"
-      ><span class="required">Shortened Descriptor</span></label
-    ><input
-      name="businessDescriptor"
-      class="form-control form-control-lg form-control-solid"
-      formControlName="businessDescriptor"
-    />
-    <div
-      class="fv-plugins-message-container invalid-feedback"
-      *ngIf="
-        form.get('businessDescriptor')?.hasError('required') &&
-        form.get('businessDescriptor')?.touched
-      "
-    >
-      Shortened Descriptor is required
+    
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Building</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Neighbourhood (RT/RW)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
     </div>
-    <div class="form-text">
-      Customers will see this shortened version of your statement descriptor
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Urban Village (Kelurahan)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Sub-Distric (Kecamatan)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
     </div>
-  </div>
-  <div class="fv-row mb-10">
-    <label class="form-label required">Corporation Type</label
-    ><select
-      name="businessType"
-      class="form-select form-select-lg form-select-solid"
-      formControlName="businessType"
-    >
-      <option value="1">S Corporation</option>
-      <option value="1">C Corporation</option>
-      <option value="2">Sole Proprietorship</option>
-      <option value="3">Non-profit</option>
-      <option value="4">Limited Liability</option>
-      <option value="5">General Partnership</option>
-    </select>
-  </div>
-  <div class="fv-row mb-10">
-    <label class="form-label">Business Description</label
-    ><textarea
-      name="businessDescription"
-      class="form-control form-control-lg form-control-solid"
-      rows="3"
-      formControlName="businessDescription"
-    ></textarea>
-  </div>
-  <div class="fv-row mb-0">
-    <label class="fs-6 fw-bold form-label required">Contact Email</label
-    ><input
-      name="businessEmail"
-      class="form-control form-control-lg form-control-solid"
-      formControlName="businessEmail"
-    />
-    <div
-      class="fv-plugins-message-container invalid-feedback"
-      *ngIf="
-        form.get('businessEmail')?.hasError('required') &&
-        form.get('businessEmail')?.touched
-      "
-    >
-      Contact Email is required
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">City</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Postal Code</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
     </div>
-    <div
-      class="fv-plugins-message-container invalid-feedback"
-      *ngIf="
-        form.get('businessEmail')?.hasError('email') &&
-        form.get('businessEmail')?.touched
-      "
-    >
-      Wrong email format
     </div>
-  </div>
+    <!--end::Col-->
+    <div class="fv-plugins-message-container invalid-feedback">
+      <!-- <ErrorMessage name='accountType' /> -->
+    </div>
+  
+</div>
+
+<div class="pb-10 pb-lg-15">
+  <h2 class="fw-bolder d-flex align-items-center text-dark">
+    Residence Address
+    <i
+      class="fas fa-exclamation-circle ms-2 fs-7"
+      ngbTooltip="Insert the address of employee data"
+    ></i>
+  </h2>
+</div>    
+
+<div class="fv-row" [formGroup]="form">
+  <div class="row">
+    <div class="row mb-5">
+      <div class="row mb-6">
+        <div class="col-lg-8 fv-row">
+          <div class="d-flex align-items-center mt-3">
+            <label class="form-check form-check-inline form-check-solid me-5"
+              ><input
+                class="form-check-input"
+                name="communication[]"
+                type="checkbox"
+              /><span class="fw-bold ps-2 fs-6">Same with ID Card Address</span></label
+            >
+          </div>
+        </div>
+      </div>
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">Street Name</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
+    </div>
+    
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Building</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Neighbourhood (RT/RW)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Urban Village (Kelurahan)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Sub-Distric (Kecamatan)</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">City</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+      <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Postal Code</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+      </div>
+    </div>
+    </div>
+    <!--end::Col-->
+    <div class="fv-plugins-message-container invalid-feedback">
+      <!-- <ErrorMessage name='accountType' /> -->
+    </div>
+  
 </div>

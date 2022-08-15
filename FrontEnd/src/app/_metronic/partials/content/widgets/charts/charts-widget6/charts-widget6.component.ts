@@ -16,12 +16,12 @@ export class ChartsWidget6Component implements OnInit {
 }
 
 function getChartOptions() {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
 
-  const baseColor = getCSSVariableValue('--bs-primary');
-  const baseLightColor = getCSSVariableValue('--bs-light-primary');
-  const secondaryColor = getCSSVariableValue('--bs-info');
+  const baseColor = getCSSVariableValue('--kt-primary');
+  const baseLightColor = getCSSVariableValue('--kt-primary-light');
+  const secondaryColor = getCSSVariableValue('--kt-info');
 
   return {
     series: [

@@ -10,7 +10,7 @@ export class ProfileService {
 
   constructor(private http:HttpClient) { }
 
-  readonly baseURL='https://localhost:44390/api/PersonalData';
+  readonly baseURL='https://localhost:5001/api/PersonalData';
   formData:Profile = new Profile();
   list:Profile[];
 
@@ -27,6 +27,11 @@ export class ProfileService {
   deleteProfile(id:Guid)
   {
     return this.http.delete(`${this.baseURL}/${id}`);
+  }
+
+  getProfilebyId(id:Guid)
+  {
+    return this.http.get(`${this.baseURL}/${id}`);
   }
 
   refreshList()

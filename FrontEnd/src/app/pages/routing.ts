@@ -11,7 +11,11 @@ const Routing: Routes = [
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),
   },
-  
+  {
+    path: 'crafted/pages/profile',
+    loadChildren: () =>
+      import('../modules/profile/profile.module').then((m) => m.ProfileModule),
+  },
   {
     path: 'crafted/account',
     loadChildren: () =>

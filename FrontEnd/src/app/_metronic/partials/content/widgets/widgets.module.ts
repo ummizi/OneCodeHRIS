@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 // Advanced Tables
 import { AdvanceTablesWidget1Component } from './advance-tables/advance-tables-widget1/advance-tables-widget1.component';
 import { AdvanceTablesWidget2Component } from './advance-tables/advance-tables-widget2/advance-tables-widget2.component';
-import { AdvanceTablesWidget4Component } from './advance-tables/advance-tables-widget4/advance-tables-widget4.component';
 import { AdvanceTablesWidget7Component } from './advance-tables/advance-tables-widget7/advance-tables-widget7.component';
-import { AdvanceTablesWidget9Component } from './advance-tables/advance-tables-widget9/advance-tables-widget9.component';
 // Base Tables
 import { BaseTablesWidget1Component } from './base-tables/base-tables-widget1/base-tables-widget1.component';
 import { BaseTablesWidget2Component } from './base-tables/base-tables-widget2/base-tables-widget2.component';
@@ -83,9 +81,7 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     // Advanced Tables
     AdvanceTablesWidget1Component,
     AdvanceTablesWidget2Component,
-    AdvanceTablesWidget4Component,
     AdvanceTablesWidget7Component,
-    AdvanceTablesWidget9Component,
     // Base Tables
     BaseTablesWidget1Component,
     BaseTablesWidget2Component,
@@ -165,9 +161,7 @@ import { TablesWidget14Component } from './tables/tables-widget14/tables-widget1
     // Advanced Tables
     AdvanceTablesWidget1Component,
     AdvanceTablesWidget2Component,
-    AdvanceTablesWidget4Component,
     AdvanceTablesWidget7Component,
-    AdvanceTablesWidget9Component,
     // Base Tables
     BaseTablesWidget1Component,
     BaseTablesWidget2Component,

@@ -109,12 +109,129 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "personal-data": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/personal-data",
+      "sourceRoot": "projects/personal-data/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/personal-data",
+            "index": "projects/personal-data/src/index.html",
+            "main": "projects/personal-data/src/main.ts",
+            "polyfills": "projects/personal-data/src/polyfills.ts",
+            "tsConfig": "projects/personal-data/tsconfig.app.json",
+            "assets": [
+              "projects/personal-data/src/favicon.ico",
+              "projects/personal-data/src/assets"
+            ],
+            "styles": [
+              "projects/personal-data/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/personal-data/src/environments/environment.ts",
+                  "with": "projects/personal-data/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "personal-data:build:production"
+            },
+            "development": {
+              "browserTarget": "personal-data:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "personal-data:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/personal-data/src/test.ts",
+            "polyfills": "projects/personal-data/src/polyfills.ts",
+            "tsConfig": "projects/personal-data/tsconfig.spec.json",
+            "karmaConfig": "projects/personal-data/karma.conf.js",
+            "assets": [
+              "projects/personal-data/src/favicon.ico",
+              "projects/personal-data/src/assets"
+            ],
+            "styles": [
+              "projects/personal-data/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/personal-data/**/*.ts",
+              "projects/personal-data/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "defaultProject": "demo1",
   "cli": {
-    "analytics": false
+    "defaultCollection": "@angular-eslint/schematics",
+    "analytics": "c9f207e1-6164-4577-8936-b7984ee1f68e"
   }
 }

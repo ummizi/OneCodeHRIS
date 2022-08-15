@@ -23,9 +23,9 @@ export class StatsWidget4Component implements OnInit {
 
   ngOnInit(): void {
     this.height = 150;
-    this.labelColor = getCSSVariableValue('--bs-gray-800');
-    this.baseColor = getCSSVariableValue('--bs-' + this.color);
-    this.lightColor = getCSSVariableValue('--bs-light-' + this.color);
+    this.labelColor = getCSSVariableValue('--kt-gray-800');
+    this.baseColor = getCSSVariableValue('--kt-' + this.color);
+    this.lightColor = getCSSVariableValue('--kt-' + this.color + '-light');
     this.chartOptions = getChartOptions(
       this.height,
       this.labelColor,

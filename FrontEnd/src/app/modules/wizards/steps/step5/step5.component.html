@@ -1,35 +1,60 @@
-<div class="pb-8 pb-lg-10">
-  <h2 class="fw-bolder text-dark">Your Are Done!</h2>
-  <div class="text-gray-400 fw-bold fs-6">
-    If you need more info, please
-    <a class="link-primary fw-bolder cursor-pointer"> Sign In</a>.
-  </div>
+<div class="pb-10 pb-lg-15">
+  <h2 class="fw-bolder d-flex align-items-center text-dark">
+    Family Data
+    <i
+      class="fas fa-exclamation-circle ms-2 fs-7"
+      ngbTooltip="Mark the checkbox to indicate the emergency number of the employee"
+    ></i>
+  </h2>
+
 </div>
-<div class="mb-0">
-  <div class="fs-6 text-gray-600 mb-5">
-    Writing headlines for blog posts is as much an art as it is a science and
-    probably warrants its own post, but for all advise is with what works for
-    your great &amp; amazing audience.
-  </div>
-  <div
-    class="
-      notice
-      d-flex
-      bg-light-warning
-      rounded
-      border-warning border border-dashed
-      p-6
-    "
-  >
-    <span class="svg-icon svg-icon-2tx svg-icon-warning me-4"></span>
-    <div class="d-flex flex-stack flex-grow-1">
-      <div class="fw-bold">
-        <h4 class="text-gray-800 fw-bolder">We need your attention!</h4>
-        <div class="fs-6 text-gray-600">
-          To start using great tools, please, please
-          <a class="fw-bolder cursor-pointer"> Create Team Platform</a>
+
+<div class="fv-row" [formGroup]="form">
+  <div class="row">
+    <div class="row mb-10">
+     
+        <div class="col-md-1 fv-row">
+          <div class="d-flex align-items-center mt-3">
+            <label class="form-check form-check-inline form-check-solid me-5"
+              ><input
+                class="form-check-input"
+                name="communication[]"
+                type="checkbox"
+              /></label
+            >
+          </div>
         </div>
-      </div>
+     
+      <!--begin::Col-->
+      <div class="col-md-5 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Name of Family Member </label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+    </div>
+      <div class="col-md-3 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Relation</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+    </div>
+    <div class="col-md-3 fv-row">
+      <!--begin::Label-->
+      <label class="required fs-5 fw-bold mb-2">Phone Number</label>
+      <!--end::Label-->
+      <!--begin::Input-->
+      <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+      <!--end::Input-->
+  </div>
+    </div>
+    
+    <!--end::Col-->
+    <div class="fv-plugins-message-container invalid-feedback">
+      <!-- <ErrorMessage name='accountType' /> -->
     </div>
   </div>
 </div>

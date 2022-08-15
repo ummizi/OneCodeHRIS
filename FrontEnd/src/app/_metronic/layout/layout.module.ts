@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InlineSVGModule } from 'ng-inline-svg';
+import { InlineSVGModule } from 'ng-inline-svg-2';
 import { RouterModule, Routes } from '@angular/router';
 import {
   NgbDropdownModule,
@@ -22,7 +22,14 @@ import { AsideMenuComponent } from './components/aside/aside-menu/aside-menu.com
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { PageTitleComponent } from './components/header/page-title/page-title.component';
 import { HeaderMenuComponent } from './components/header/header-menu/header-menu.component';
-import { DrawersModule, DropdownMenusModule, ModalsModule } from '../partials';
+import {
+  DrawersModule,
+  DropdownMenusModule,
+  ModalsModule,
+  EngagesModule,
+} from '../partials';
+import { EngagesComponent } from '../partials/layout/engages/engages.component';
+import { ThemeModeModule } from '../partials/layout/theme-mode-switcher/theme-mode.module';
 
 const routes: Routes = [
   {
@@ -45,6 +52,7 @@ const routes: Routes = [
     TopbarComponent,
     PageTitleComponent,
     HeaderMenuComponent,
+    EngagesComponent,
   ],
   imports: [
     CommonModule,
@@ -56,9 +64,11 @@ const routes: Routes = [
     ExtrasModule,
     ModalsModule,
     DrawersModule,
+    EngagesModule,
     DropdownMenusModule,
     NgbTooltipModule,
     TranslateModule,
+    ThemeModeModule
   ],
   exports: [RouterModule],
 })

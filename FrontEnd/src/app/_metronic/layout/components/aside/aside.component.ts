@@ -25,6 +25,7 @@ export class AsideComponent implements OnInit, OnDestroy {
   asideTheme: string = '';
   asideMinimize: boolean = false;
   asideMenuCSSClasses: string = '';
+  appPreviewDocsUrl: string = environment.appPreviewDocsUrl;
   @ViewChild('ktAsideScroll', { static: true }) ktAsideScroll: ElementRef;
   private unsubscribe: Subscription[] = [];
 
@@ -56,6 +57,15 @@ export class AsideComponent implements OnInit, OnDestroy {
         this.ktAsideScroll.nativeElement.scrollTop = 0;
       }
     }, 50);
+  }
+
+  minimize() {
+    const asideRef = document.getElementById('kt_aside');
+    asideRef?.classList.add('animating');
+
+    setTimeout(() => {
+      asideRef?.classList.remove('animating');
+    }, 300);
   }
 
   ngOnDestroy() {

@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject, Subscription } from 'rxjs';
 import { ICreateAccount, inits } from '../create-account.helper';
+import { Step1Component } from '../steps/step1/step1.component';
+import { ProfileService } from 'src/app/shared/profile/profile.service';
+import { Profile } from 'src/app/shared/profile/profile.model';
 
 @Component({
   selector: 'app-vertical',
   templateUrl: './vertical.component.html',
 })
-export class VerticalComponent implements OnInit {
-  formsCount = 5;
+export class VerticalComponent implements OnInit, OnDestroy {
+  formsCount = 10;
   account$: BehaviorSubject<ICreateAccount> =
     new BehaviorSubject<ICreateAccount>(inits);
   currentStep$: BehaviorSubject<number> = new BehaviorSubject(1);
@@ -15,6 +18,8 @@ export class VerticalComponent implements OnInit {
     false
   );
   private unsubscribe: Subscription[] = [];
+
+  // @ViewChild(Step1Component) profiles : Step1Component;
 
   constructor() {}
 
@@ -28,6 +33,8 @@ export class VerticalComponent implements OnInit {
   };
 
   nextStep() {
+    // this.profile.insertRecord
+    // alert (this.profile.id)
     const nextStep = this.currentStep$.value + 1;
     if (nextStep > this.formsCount) {
       return;

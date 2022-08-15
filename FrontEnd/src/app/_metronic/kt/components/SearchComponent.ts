@@ -192,6 +192,8 @@ class SearchComponent {
   }
 
   private handlers(): void {
+    const context = this
+
     // Focus
     this.inputElement.addEventListener('focus', this.focus)
 
@@ -226,28 +228,28 @@ class SearchComponent {
 
         this.menuObject.on('kt.menu.dropdown.show', function () {
           // @ts-ignore
-          if (isVisibleElement(this.toggleElement)) {
+          if (isVisibleElement(context.toggleElement)) {
             // @ts-ignore
-            this.toggleElement.classList.add('active')
+            context.toggleElement.classList.add('active')
             // @ts-ignore
-            this.toggleElement.classList.add('show')
+            context.toggleElement.classList.add('show')
           }
         })
 
         this.menuObject.on('kt.menu.dropdown.hide', function () {
           // @ts-ignore
-          if (isVisibleElement(this.toggleElement)) {
+          if (isVisibleElement(context.toggleElement)) {
             // @ts-ignore
-            this.toggleElement.classList.remove('active')
+            context.toggleElement.classList.remove('active')
             // @ts-ignore
-            this.toggleElement.classList.remove('show')
+            context.toggleElement.classList.remove('show')
           }
         })
       }
 
       this.menuObject.on('kt.menu.dropdown.shown', function () {
         // @ts-ignore
-        this.inputElement.focus()
+        context.inputElement.focus()
       })
     }
 
@@ -274,13 +276,10 @@ class SearchComponent {
     if (this.layout === 'menu') {
       let responsiveFormMode = this.getResponsiveFormMode()
 
-      if (responsiveFormMode === 'on' && this.contentElement.contains(this.formElement) === false) {
+      if (responsiveFormMode === 'on' && !this.contentElement.contains(this.formElement)) {
         this.contentElement.prepend(this.formElement)
         this.formElement.classList.remove('d-none')
-      } else if (
-        responsiveFormMode === 'off' &&
-        this.contentElement.contains(this.formElement) === true
-      ) {
+      } else if (responsiveFormMode === 'off' && this.contentElement.contains(this.formElement)) {
         this.element.prepend(this.formElement)
         this.formElement.classList.add('d-none')
       }
@@ -307,7 +306,7 @@ class SearchComponent {
 
   // Search
   public search = () => {
-    if (this.processing === false) {
+    if (!this.processing) {
       // Show search spinner
       if (this.spinnerElement) {
         this.spinnerElement.classList.remove('d-none')
@@ -327,7 +326,7 @@ class SearchComponent {
       this.inputElement.focus()
 
       this.processing = true
-      EventHandlerUtil.trigger(this.element, 'kt.search.process')
+      EventHandlerUtil.trigger(this.element, 'kt.search.process', this)
     }
   }
 
@@ -419,8 +418,8 @@ class SearchComponent {
     return EventHandlerUtil.one(this.element, name, handler)
   }
 
-  public off = (name: string) => {
-    return EventHandlerUtil.off(this.element, name)
+  public off = (name: string, handlerId: string) => {
+    return EventHandlerUtil.off(this.element, name, handlerId)
   }
 
   // Static methods
@@ -430,7 +429,7 @@ class SearchComponent {
   ) => {
     const Search = DataUtil.get(el, componentName)
     if (Search) {
-      return Search
+      return Search as SearchComponent
     }
 
     return null

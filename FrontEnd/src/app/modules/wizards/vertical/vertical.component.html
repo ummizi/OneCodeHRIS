@@ -1,182 +1,341 @@
-<div
-  class="
+<div class="
     stepper stepper-pills stepper-column
     d-flex
     flex-column flex-xl-row flex-row-fluid
-  "
-  id="kt_create_account_stepper"
->
+  " id="kt_create_account_stepper">
+  <!--begin::Aside-->
   <div
-    class="
-      d-flex
-      justify-content-center
-      bg-white
-      rounded
-      justify-content-xl-start
-      flex-row-auto
-      w-100 w-xl-300px w-xxl-400px
-      me-9
-    "
-  >
-    <div class="px-6 px-lg-10 px-xxl-15 py-20">
+    class="card d-flex justify-content-center justify-content-xl-start flex-row-auto w-100 w-xl-300px w-xxl-400px me-9">
+    <div class="card-body px-6 px-lg-10 px-xxl-15 py-20">
       <div class="stepper-nav">
-        <div
-          class="stepper-item"
-          [ngClass]="{
+
+        <div class="stepper-item" [ngClass]="{
             current: currentStep$.value === 1,
             completed: currentStep$.value > 1
-          }"
-        >
-          <div class="stepper-line w-40px"></div>
+          }">
+          <!--begin::Wrapper-->
+          <div class="stepper-wrapper">
+            <!--begin::Icon-->
+            <div class="stepper-icon w-40px h-40px">
+              <i class="stepper-check fas fa-check"></i>
+              <span class="stepper-number">1</span>
+            </div>
+            <!--end::Icon-->
 
-          <div class="stepper-icon w-40px h-40px">
-            <i class="stepper-check fas fa-check"></i>
-            <span class="stepper-number">1</span>
+            <!--begin::Label-->
+            <div class="stepper-label">
+              <h3 class="stepper-title">
+                Personal Data
+              </h3>
+
+              <div class="stepper-desc fw-semibold">
+                Insert employee data
+              </div>
+            </div>
+            <!--end::Label-->
           </div>
+          <!--end::Wrapper-->
 
-          <div class="stepper-label">
-            <h3 class="stepper-title">Account Type</h3>
-
-            <div class="stepper-desc fw-bold">Setup Your Account Details</div>
-          </div>
+          <!--begin::Line-->
+          <div class="stepper-line h-40px"></div>
+          <!--end::Line-->
         </div>
 
-        <div
-          class="stepper-item"
-          [ngClass]="{
+        <div class="stepper-item" [ngClass]="{
             current: currentStep$.value === 2,
             completed: currentStep$.value > 2
-          }"
-        >
-          <div class="stepper-line w-40px"></div>
+          }">
+          <!--begin::Wrapper-->
+          <div class="stepper-wrapper">
+            <!--begin::Icon-->
+            <div class="stepper-icon w-40px h-40px">
+              <i class="stepper-check fas fa-check"></i>
+              <span class="stepper-number">2</span>
+            </div>
+            <!--end::Icon-->
 
-          <div class="stepper-icon w-40px h-40px">
-            <i class="stepper-check fas fa-check"></i>
-            <span class="stepper-number">2</span>
+            <!--begin::Label-->
+            <div class="stepper-label">
+              <h3 class="stepper-title">
+                Contact
+              </h3>
+              <div class="stepper-desc fw-semibold">
+                Insert employee contact
+              </div>
+            </div>
+            <!--end::Label-->
           </div>
+          <!--end::Wrapper-->
 
-          <div class="stepper-label">
-            <h3 class="stepper-title">Account Settings</h3>
-            <div class="stepper-desc fw-bold">Setup Your Account Settings</div>
-          </div>
+          <!--begin::Line-->
+          <div class="stepper-line h-40px"></div>
+          <!--end::Line-->
         </div>
 
-        <div
-          class="stepper-item"
-          [ngClass]="{
+        <div class="stepper-item" [ngClass]="{
             current: currentStep$.value === 3,
             completed: currentStep$.value > 3
-          }"
-        >
-          <div class="stepper-line w-40px"></div>
+          }">
+          <!--begin::Wrapper-->
+          <div class="stepper-wrapper">
+            <!--begin::Icon-->
+            <div class="stepper-icon w-40px h-40px">
+              <i class="stepper-check fas fa-check"></i>
+              <span class="stepper-number">3</span>
+            </div>
+            <!--end::Icon-->
 
-          <div class="stepper-icon w-40px h-40px">
-            <i class="stepper-check fas fa-check"></i>
-            <span class="stepper-number">3</span>
+            <!--begin::Label-->
+            <div class="stepper-label">
+              <h3 class="stepper-title">
+                Address
+              </h3>
+              <div class="stepper-desc fw-semibold">
+                Insert employee address
+              </div>
+            </div>
+            <!--end::Label-->
           </div>
+          <!--end::Wrapper-->
 
-          <div class="stepper-label">
-            <h3 class="stepper-title">Business Info</h3>
-            <div class="stepper-desc fw-bold">Your Business Related Info</div>
-          </div>
+          <!--begin::Line-->
+          <div class="stepper-line h-40px"></div>
+          <!--end::Line-->
         </div>
 
-        <div
-          class="stepper-item"
-          [ngClass]="{
+        <div class="stepper-item" [ngClass]="{
             current: currentStep$.value === 4,
             completed: currentStep$.value > 4
-          }"
-        >
-          <div class="stepper-line w-40px"></div>
+          }">
+          <!--begin::Wrapper-->
+          <div class="stepper-wrapper">
+            <!--begin::Icon-->
+            <div class="stepper-icon w-40px h-40px">
+              <i class="stepper-check fas fa-check"></i>
+              <span class="stepper-number">4</span>
+            </div>
+            <!--end::Icon-->
 
-          <div class="stepper-icon w-40px h-40px">
-            <i class="stepper-check fas fa-check"></i>
-            <span class="stepper-number">4</span>
+            <!--begin::Label-->
+            <div class="stepper-label">
+              <h3 class="stepper-title">
+                Bank Account
+              </h3>
+              <div class="stepper-desc fw-semibold">
+                Insert employee bank account
+              </div>
+            </div>
+            <!--end::Label-->
           </div>
+          <!--end::Wrapper-->
 
-          <div class="stepper-label">
-            <h3 class="stepper-title">Billing Details</h3>
-            <div class="stepper-desc fw-bold">Set Your Payment Methods</div>
-          </div>
+          <!--begin::Line-->
+          <div class="stepper-line h-40px"></div>
+          <!--end::Line-->
         </div>
 
-        <div
-          class="stepper-item"
-          [ngClass]="{ current: currentStep$.value === 5 }"
-        >
-          <div class="stepper-line w-40px"></div>
-
+        <div class="stepper-item" [ngClass]="{
+          current: currentStep$.value === 5,
+          completed: currentStep$.value > 5
+        }">
+        <!--begin::Wrapper-->
+        <div class="stepper-wrapper">
+          <!--begin::Icon-->
           <div class="stepper-icon w-40px h-40px">
             <i class="stepper-check fas fa-check"></i>
             <span class="stepper-number">5</span>
           </div>
+          <!--end::Icon-->
 
+          <!--begin::Label-->
           <div class="stepper-label">
-            <h3 class="stepper-title">Completed</h3>
-            <div class="stepper-desc fw-bold">Woah, we are here</div>
+            <h3 class="stepper-title">
+              Family Data
+            </h3>
+            <div class="stepper-desc fw-semibold">
+              Insert employee family data
+            </div>
+          </div>
+          <!--end::Label-->
+        </div>
+        <!--end::Wrapper-->
+
+        <!--begin::Line-->
+        <div class="stepper-line h-40px"></div>
+        <!--end::Line-->
+      </div>
+      
+        <div class="stepper-item" [ngClass]="{
+          current: currentStep$.value === 6,
+          completed: currentStep$.value > 6
+        }">
+        <!--begin::Wrapper-->
+        <div class="stepper-wrapper">
+          <!--begin::Icon-->
+          <div class="stepper-icon w-40px h-40px">
+            <i class="stepper-check fas fa-check"></i>
+            <span class="stepper-number">6</span>
+          </div>
+          <!--end::Icon-->
+
+          <!--begin::Label-->
+          <div class="stepper-label">
+            <h3 class="stepper-title">
+              Employee Document
+            </h3>
+            <div class="stepper-desc fw-semibold">
+              Insert the employee document
+            </div>
+          </div>
+          <!--end::Label-->
+        </div>
+        <!--end::Wrapper-->
+
+        <!--begin::Line-->
+        <div class="stepper-line h-40px"></div>
+        <!--end::Line-->
+      </div>
+
+      <div class="stepper-item" [ngClass]="{
+        current: currentStep$.value === 7,
+        completed: currentStep$.value > 7
+      }">
+      <!--begin::Wrapper-->
+      <div class="stepper-wrapper">
+        <!--begin::Icon-->
+        <div class="stepper-icon w-40px h-40px">
+          <i class="stepper-check fas fa-check"></i>
+          <span class="stepper-number">7</span>
+        </div>
+        <!--end::Icon-->
+
+        <!--begin::Label-->
+        <div class="stepper-label">
+          <h3 class="stepper-title">
+            Insurance
+          </h3>
+          <div class="stepper-desc fw-semibold">
+            Insert the employee insurance
           </div>
         </div>
+        <!--end::Label-->
+      </div>
+      <!--end::Wrapper-->
+
+      <!--begin::Line-->
+      <div class="stepper-line h-40px"></div>
+      <!--end::Line-->
+    </div>
+
+    <div class="stepper-item" [ngClass]="{
+      current: currentStep$.value === 8,
+      completed: currentStep$.value > 8
+    }">
+    <!--begin::Wrapper-->
+    <div class="stepper-wrapper">
+      <!--begin::Icon-->
+      <div class="stepper-icon w-40px h-40px">
+        <i class="stepper-check fas fa-check"></i>
+        <span class="stepper-number">8</span>
+      </div>
+      <!--end::Icon-->
+
+      <!--begin::Label-->
+      <div class="stepper-label">
+        <h3 class="stepper-title">
+          Facility
+        </h3>
+        <div class="stepper-desc fw-semibold">
+          Insert the employee facility
+        </div>
+      </div>
+      <!--end::Label-->
+    </div>
+    <!--end::Wrapper-->
+
+    <!--begin::Line-->
+    <div class="stepper-line h-40px"></div>
+    <!--end::Line-->
+  </div>
+        
+      <div class="stepper-item" [ngClass]="{ 
+        current: currentStep$.value === 9 }">
+        <!--begin::Wrapper-->
+        <div class="stepper-wrapper">
+          <!--begin::Icon-->
+          <div class="stepper-icon w-40px h-40px">
+            <i class="stepper-check fas fa-check"></i>
+            <span class="stepper-number">9</span>
+          </div>
+          <!--end::Icon-->
+
+          <!--begin::Label-->
+          <div class="stepper-label">
+            <h3 class="stepper-title">
+              Transport
+            </h3>
+            <div class="stepper-desc fw-semibold">
+              Insert employee transportation
+            </div>
+          </div>
+          <!--end::Label-->
+        </div>
+        <!--end::Wrapper-->
+      </div>
       </div>
     </div>
   </div>
+  <!--begin::Aside-->
 
-  <div class="d-flex flex-row-fluid flex-center bg-white rounded">
-    <form
-      class="py-20 w-100 w-xl-700px px-9"
-      noValidate
-      id="kt_create_account_form"
-    >
+  <!--begin::Content-->
+  <div class="d-flex flex-row-fluid flex-center bg-body rounded">
+    <form class="py-20 w-100 w-xl-700px px-9" noValidate id="kt_create_account_form">
       <div class="current">
         <ng-container *ngIf="currentStep$.value === 1">
-          <app-step1
-            class="w-100"
-            [updateParentModel]="updateAccount"
-            [defaultValues]="account$.value"
-          ></app-step1>
+          <app-step1 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step1>
         </ng-container>
 
         <ng-container *ngIf="currentStep$.value === 2">
-          <app-step2
-            class="w-100"
-            [updateParentModel]="updateAccount"
-            [defaultValues]="account$.value"
-          ></app-step2>
+          <app-step2 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step2>
         </ng-container>
 
         <ng-container *ngIf="currentStep$.value === 3">
-          <app-step3
-            class="w-100"
-            [updateParentModel]="updateAccount"
-            [defaultValues]="account$.value"
-          ></app-step3>
+          <app-step3 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step3>
         </ng-container>
 
         <ng-container *ngIf="currentStep$.value === 4">
-          <app-step4
-            class="w-100"
-            [updateParentModel]="updateAccount"
-            [defaultValues]="account$.value"
-          ></app-step4>
+          <app-step4 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step4>
         </ng-container>
 
         <ng-container *ngIf="currentStep$.value === 5">
-          <app-step5 class="w-100"></app-step5>
+          <app-step5 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step5>
         </ng-container>
+
+        <ng-container *ngIf="currentStep$.value === 6">
+          <app-step6 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step6>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep$.value === 7">
+          <app-step7 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step7>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep$.value === 8">
+          <app-step8 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step8>
+        </ng-container>
+
+        <ng-container *ngIf="currentStep$.value === 9">
+          <app-step9 class="w-100" [updateParentModel]="updateAccount" [defaultValues]="account$.value"></app-step9>
+        </ng-container>
+
+
       </div>
 
       <div class="d-flex flex-stack pt-10">
         <div class="mr-2">
           <ng-container *ngIf="currentStep$.value !== 1">
-            <button
-              type="button"
-              class="btn btn-lg btn-light-primary me-3"
-              (click)="prevStep()"
-            >
-              <span
-                [inlineSVG]="'./assets/media/icons/duotune/arrows/arr063.svg'"
-                class="svg-icon svg-icon-4 me-1"
-              ></span>
+            <button type="button" class="btn btn-lg btn-light-primary me-3" (click)="prevStep()">
+              <span [inlineSVG]="'./assets/media/icons/duotune/arrows/arr063.svg'"
+                class="svg-icon svg-icon-4 me-1"></span>
               Back
             </button>
           </ng-container>
@@ -184,23 +343,16 @@
 
         <ng-container *ngIf="currentStep$.value !== formsCount">
           <div>
-            <button
-              type="button"
-              class="btn btn-lg btn-primary me-3"
-              [disabled]="!isCurrentFormValid$.value"
-              (click)="nextStep()"
-            >
+            <button type="button" class="btn btn-lg btn-primary me-3" [disabled]="!isCurrentFormValid$.value"
+              (click)="nextStep()">
               <span class="indicator-label">
-                <ng-container *ngIf="currentStep$.value < formsCount - 1">
+                <ng-container *ngIf="currentStep$.value < formsCount-1">
                   Continue {{ " " }}
-                  <span
-                    [inlineSVG]="
+                  <span [inlineSVG]="
                       './assets/media/icons/duotune/arrows/arr064.svg'
-                    "
-                    class="svg-icon svg-icon-3 ms-2 me-0"
-                  ></span>
+                    " class="svg-icon svg-icon-3 ms-2 me-0"></span>
                 </ng-container>
-                <ng-container *ngIf="currentStep$.value === formsCount - 1">
+                <ng-container *ngIf="currentStep$.value === formsCount-1">
                   Submit
                 </ng-container>
               </span>
@@ -210,4 +362,5 @@
       </div>
     </form>
   </div>
+  <!--end::Content-->
 </div>

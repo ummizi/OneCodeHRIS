@@ -1,0 +1,164 @@
+
+
+<div class="pb-10 pb-lg-15">
+    <h2 class="fw-bolder d-flex align-items-center text-dark">
+      Personal Data
+      <i
+        class="fas fa-exclamation-circle ms-2 fs-7"
+        ngbTooltip="Insert the personal of employee data"
+      ></i>
+    </h2>
+  
+  </div>
+  
+  <div class="fv-row" [formGroup]="form">
+    <input type="hidden" name="id" ngModel />
+    <div class="row">
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+            <!--begin::Label-->
+            <label class="required fs-5 fw-bold mb-2">ID Number</label>
+            <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        </div>
+        <!--end::Col-->
+      </div>
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+            <!--begin::Label-->
+            <label class="required fs-5 fw-bold mb-2">First Name</label>
+            <!--end::Label-->
+            <!--begin::Input-->
+            <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+            <!--end::Input-->
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+            <!--end::Label-->
+            <label class="required fs-5 fw-bold mb-2">Last Name</label>
+            <!--end::Label-->
+            <!--end::Input-->
+            <input type="text" class="form-control form-control-solid" placeholder="" name="last_name" />
+            <!--end::Input-->
+        </div>
+        <!--end::Col-->
+      </div>
+      <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">Place Of Birth</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--end::Label-->
+          <label class="required fs-5 fw-bold mb-2">Date Of Birth</label>
+          <!--end::Label-->
+          <!--end::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="start_date" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
+      </div>
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+          <label class="form-label required">Gender</label
+          ><select
+            name="businessType"
+            class="form-select form-select-lg form-select-solid"
+            formControlName="genderType"
+          >
+            <option value="1">Male</option>
+            <option value="1">Female</option>
+            
+          </select>
+        </div>
+        <div class="col-md-6 fv-row">
+          <label class="form-label required">Blood Type</label
+            ><select
+              name="businessType"
+              class="form-select form-select-lg form-select-solid"
+              formControlName="bloodType"
+            >
+              <option value="1">A</option>
+              <option value="1">AB</option>
+              <option value="1">B</option>
+              <option value="1">O</option>
+            </select>
+        </div>
+      </div>
+      <!--end::Col-->
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+        <label class="form-label required">Marital Status</label
+          ><select
+            name="businessType"
+            class="form-select form-select-lg form-select-solid"
+            formControlName="bloodType"
+          >
+            <option value="1">Single</option>
+            <option value="1">Married</option>
+            <option value="1">Widowed</option>
+            <option value="1">Divorced</option>
+          </select>
+          </div>
+          <div class="col-md-6 fv-row">
+            <label class="form-label required">Employee Position</label
+              ><select
+                name="businessType"
+                class="form-select form-select-lg form-select-solid"
+                formControlName="bloodType"
+              >
+                <option value="1">CEO</option>
+                <option value="1">Director</option>
+                <option value="1">Project Manager</option>
+                <option value="1">Lead Developer</option>
+                <option value="1">Developer Staff</option>
+                <option value="1">Quality Assurance Staff</option>
+                <option value="1">Data Engineer Staff</option>
+                <option value="1">Human Resource Development Staff</option>
+              </select>
+              </div>
+        <!--end::Col-->
+      </div>
+      <div class="row mb-5">
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+            <!--begin::Label-->
+            <label class="required fs-5 fw-bold mb-2">Join Date</label>
+            <!--end::Label-->
+            <!--begin::Input-->
+            <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+            <!--end::Input-->
+        </div>
+        <!--end::Col-->
+        <!--begin::Col-->
+        <div class="col-md-6 fv-row">
+          <label class="form-label required">Employee Status</label
+            ><select
+              name="businessType"
+              class="form-select form-select-lg form-select-solid"
+              formControlName="bloodType"
+            >
+              <option value="1">Permanent</option>
+              <option value="1">Contract</option>
+              <option value="1">Probation</option>
+              <option value="1">Freelance</option>
+            </select>
+            </div>
+      <!--end::Col-->
+    </div>
+      <div class="fv-plugins-message-container invalid-feedback">
+        <!-- <ErrorMessage name='accountType' /> -->
+      </div>
+    </div>
+  </div>

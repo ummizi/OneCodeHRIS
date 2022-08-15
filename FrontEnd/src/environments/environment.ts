@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appVersion: 'v8.0.32',
+  appVersion: 'v8.1.0',
   USERDATA_KEY: 'authf649fc9a5f55',
   isMockEnabled: true,
   apiUrl: 'api',
@@ -13,7 +13,7 @@ export const environment = {
   appHTMLIntegration: 'https://preview.keenthemes.com/metronic8/demo1/documentation/base/helpers/flex-layouts.html',
   appPreviewUrl: 'https://preview.keenthemes.com/metronic8/angular/demo1/',
   appPreviewAngularUrl: 'https://preview.keenthemes.com/metronic8/angular/demo1',
- 
+  appPreviewDocsUrl: 'https://preview.keenthemes.com/metronic8/angular/docs',
   appPreviewChangelogUrl: 'https://preview.keenthemes.com/metronic8/angular/docs/changelog',
   appDemos: {
     'demo1': {
@@ -26,21 +26,21 @@ export const environment = {
     'demo2': {
       'title': 'Demo 2',
       'description': 'SaaS Application',
-      'published': false,
+      'published': true,
       'thumbnail': './assets/media/demos/demo2.png'
     },
 
     'demo3': {
       'title': 'Demo 3',
       'description': 'New Trend',
-      'published': false,
+      'published': true,
       'thumbnail': './assets/media/demos/demo3.png'
     },
 
     'demo4': {
       'title': 'Demo 4',
       'description': 'Intranet Application',
-      'published': false,
+      'published': true,
       'thumbnail': './assets/media/demos/demo4.png'
     },
 
@@ -54,7 +54,7 @@ export const environment = {
     'demo6': {
       'title': 'Demo 6',
       'description': 'Admin Backend',
-      'published': false,
+      'published': true,
       'thumbnail': './assets/media/demos/demo6.png'
     },
 

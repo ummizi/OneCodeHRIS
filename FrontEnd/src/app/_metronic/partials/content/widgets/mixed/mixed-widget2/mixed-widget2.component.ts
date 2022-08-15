@@ -26,9 +26,9 @@ function getChartOptions(
   chartColor: string,
   strokeColor: string
 ) {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
-  const color = getCSSVariableValue('--bs-' + chartColor);
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
+  const color = getCSSVariableValue('--kt-' + chartColor);
 
   return {
     series: [

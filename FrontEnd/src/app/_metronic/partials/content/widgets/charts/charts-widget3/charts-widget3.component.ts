@@ -16,10 +16,10 @@ export class ChartsWidget3Component implements OnInit {
 }
 
 function getChartOptions(height: number) {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
-  const baseColor = getCSSVariableValue('--bs-info');
-  const lightColor = getCSSVariableValue('--bs-light-info');
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
+  const baseColor = getCSSVariableValue('--kt-info');
+  const lightColor = getCSSVariableValue('--kt-info-light');
 
   return {
     series: [

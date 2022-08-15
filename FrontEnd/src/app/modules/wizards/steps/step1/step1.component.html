@@ -1,89 +1,170 @@
+
+
 <div class="pb-10 pb-lg-15">
   <h2 class="fw-bolder d-flex align-items-center text-dark">
-    Choose Account Type
+    Personal Data
     <i
       class="fas fa-exclamation-circle ms-2 fs-7"
-      ngbTooltip="Billing is issued based on your selected account type"
+      ngbTooltip="Insert the personal of employee data"
     ></i>
   </h2>
 
-  <div class="text-gray-400 fw-bold fs-6">
-    If you need more info, please check out
-    <a href="#" class="link-primary fw-bolder"> Help Page </a>
-    .
-  </div>
 </div>
 
 <div class="fv-row" [formGroup]="form">
+  <input type="hidden" name="id" ngModel />
   <div class="row">
-    <div class="col-lg-6">
-      <input
-        formControlName="accountType"
-        name="accountType"
-        type="radio"
-        class="btn-check"
-        id="kt_create_account_form_account_type_personal"
-        value="personal"
-      />
-      <label
-        class="
-          btn btn-outline btn-outline-dashed btn-outline-default
-          p-7
-          d-flex
-          align-items-center
-          mb-10
-        "
-        for="kt_create_account_form_account_type_personal"
-      >
-        <span
-          [inlineSVG]="'./assets/media/icons/duotune/communication/com005.svg'"
-          class="svg-icon svg-icon-3x me-5"
-        ></span>
-        <span class="d-block fw-bold text-start">
-          <span class="text-dark fw-bolder d-block fs-4 mb-2"
-            >Personal Account</span
-          >
-          <span class="text-gray-400 fw-bold fs-6">
-            If you need more info, please check it out
-          </span>
-        </span>
-      </label>
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">ID Number</label>
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!-- <input 
+          type="text" 
+          class="form-control form-control-solid" 
+          placeholder="NIK" 
+          name="nik"
+          #nik="ngModel" 
+          [(ngModel)]="service.formData.nik"
+         /> -->
+      </div>
+      <!--end::Col-->
     </div>
-
-    <div class="col-lg-6">
-      <input
-        formControlName="accountType"
-        name="accountType"
-        type="radio"
-        class="btn-check"
-        id="kt_create_account_form_account_type_corporate"
-        value="corporate"
-      />
-      <label
-        class="
-          btn btn-outline btn-outline-dashed btn-outline-default
-          p-7
-          d-flex
-          align-items-center
-        "
-        for="kt_create_account_form_account_type_corporate"
-      >
-        <span
-          [inlineSVG]="'./assets/media/icons/duotune/finance/fin006.svg'"
-          class="svg-icon svg-icon-3x me-5"
-        ></span>
-
-        <span class="d-block fw-bold text-start">
-          <span class="text-dark fw-bolder d-block fs-4 mb-2"
-            >Corporate Account</span
-          >
-          <span class="text-gray-400 fw-bold fs-6">
-            Create corporate account to mane users
-          </span>
-        </span>
-      </label>
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">First Name</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--end::Label-->
+          <label class="required fs-5 fw-bold mb-2">Last Name</label>
+          <!--end::Label-->
+          <!--end::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="last_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
     </div>
-
+    <div class="row mb-5">
+    <!--begin::Col-->
+    <div class="col-md-6 fv-row">
+        <!--begin::Label-->
+        <label class="required fs-5 fw-bold mb-2">Place Of Birth</label>
+        <!--end::Label-->
+        <!--begin::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+        <!--end::Input-->
+    </div>
+    <!--end::Col-->
+    <!--begin::Col-->
+    <div class="col-md-6 fv-row">
+        <!--end::Label-->
+        <label class="required fs-5 fw-bold mb-2">Date Of Birth</label>
+        <!--end::Label-->
+        <!--end::Input-->
+        <input type="text" class="form-control form-control-solid" placeholder="" name="start_date" />
+        <!--end::Input-->
+    </div>
+    <!--end::Col-->
+    </div>
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+        <label class="form-label required">Gender</label
+        ><select
+          name="businessType"
+          class="form-select form-select-lg form-select-solid"
+          formControlName="genderType"
+        >
+          <option value="1">Male</option>
+          <option value="1">Female</option>
+          
+        </select>
+      </div>
+      <div class="col-md-6 fv-row">
+        <label class="form-label required">Blood Type</label
+          ><select
+            name="businessType"
+            class="form-select form-select-lg form-select-solid"
+            formControlName="bloodType"
+          >
+            <option value="1">A</option>
+            <option value="1">AB</option>
+            <option value="1">B</option>
+            <option value="1">O</option>
+          </select>
+      </div>
+    </div>
+    <!--end::Col-->
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+      <label class="form-label required">Marital Status</label
+        ><select
+          name="businessType"
+          class="form-select form-select-lg form-select-solid"
+          formControlName="bloodType"
+        >
+          <option value="1">Single</option>
+          <option value="1">Married</option>
+          <option value="1">Widowed</option>
+          <option value="1">Divorced</option>
+        </select>
+        </div>
+        <div class="col-md-6 fv-row">
+          <label class="form-label required">Employee Position</label
+            ><select
+              name="businessType"
+              class="form-select form-select-lg form-select-solid"
+              formControlName="bloodType"
+            >
+              <option value="1">CEO</option>
+              <option value="1">Director</option>
+              <option value="1">Project Manager</option>
+              <option value="1">Lead Developer</option>
+              <option value="1">Developer Staff</option>
+              <option value="1">Quality Assurance Staff</option>
+              <option value="1">Data Engineer Staff</option>
+              <option value="1">Human Resource Development Staff</option>
+            </select>
+            </div>
+      <!--end::Col-->
+    </div>
+    <div class="row mb-5">
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+          <!--begin::Label-->
+          <label class="required fs-5 fw-bold mb-2">Join Date</label>
+          <!--end::Label-->
+          <!--begin::Input-->
+          <input type="text" class="form-control form-control-solid" placeholder="" name="first_name" />
+          <!--end::Input-->
+      </div>
+      <!--end::Col-->
+      <!--begin::Col-->
+      <div class="col-md-6 fv-row">
+        <label class="form-label required">Employee Status</label
+          ><select
+            name="businessType"
+            class="form-select form-select-lg form-select-solid"
+            formControlName="bloodType"
+          >
+            <option value="1">Permanent</option>
+            <option value="1">Contract</option>
+            <option value="1">Probation</option>
+            <option value="1">Freelance</option>
+          </select>
+          </div>
+    <!--end::Col-->
+  </div>
     <div class="fv-plugins-message-container invalid-feedback">
       <!-- <ErrorMessage name='accountType' /> -->
     </div>

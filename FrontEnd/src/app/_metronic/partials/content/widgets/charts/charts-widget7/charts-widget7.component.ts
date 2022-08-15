@@ -16,18 +16,18 @@ export class ChartsWidget7Component implements OnInit {
 }
 
 function getChartOptions(height: number) {
-  const labelColor = getCSSVariableValue('--bs-gray-500');
-  const borderColor = getCSSVariableValue('--bs-gray-200');
-  const strokeColor = getCSSVariableValue('--bs-gray-300');
+  const labelColor = getCSSVariableValue('--kt-gray-500');
+  const borderColor = getCSSVariableValue('--kt-gray-200');
+  const strokeColor = getCSSVariableValue('--kt-gray-300');
 
-  const color1 = getCSSVariableValue('--bs-warning');
-  const color1Light = getCSSVariableValue('--bs-light-warning');
+  const color1 = getCSSVariableValue('--kt-warning');
+  const color1Light = getCSSVariableValue('--kt-light-warning');
 
-  const color2 = getCSSVariableValue('--bs-success');
-  const color2Light = getCSSVariableValue('--bs-light-success');
+  const color2 = getCSSVariableValue('--kt-success');
+  const color2Light = getCSSVariableValue('--kt-light-success');
 
-  const color3 = getCSSVariableValue('--bs-primary');
-  const color3Light = getCSSVariableValue('--bs-light-primary');
+  const color3 = getCSSVariableValue('--kt-primary');
+  const color3Light = getCSSVariableValue('--kt-light-primary');
 
   return {
     series: [

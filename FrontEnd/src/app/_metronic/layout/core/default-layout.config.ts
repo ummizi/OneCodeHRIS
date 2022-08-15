@@ -51,7 +51,7 @@ export interface ISidebar extends ILayoutComponent {
   toggle: boolean;
   shown: boolean;
   content: 'general' | 'user' | 'shop';
-  bgColor: 'bg-white' | 'bg-info';
+  bgColor: 'bg-body' | 'bg-info';
   displayFooter: boolean;
   displayFooterButton: boolean;
 }
@@ -102,7 +102,7 @@ export interface IPageTitle extends ILayoutComponent {
 export interface IMain extends ILayoutComponent {
   body?: {
     backgroundImage?: string;
-    class: string;
+    class?: string;
   };
   primaryColor: string;
   darkSkinEnabled: boolean;

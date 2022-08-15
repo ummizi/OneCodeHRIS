@@ -6,37 +6,7 @@
     </h1>
     <!-- end::Title -->
   </ng-container>
-  <div class="d-flex align-items-stretch justify-content-between flex-lg-grow-1">
-    <!--begin::Navbar-->
-    <div class="d-flex align-items-center" id="kt_header_nav">
-      <!--begin::Page title-->
-      <div data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_header_nav'}" class="page-title d-flex align-items-center flex-wrap me-3 mb-5 mb-lg-0">
-        <!--begin::Separator-->
-        <span class="h-20px border-gray-300 border-start mx-4"></span>
-        <!--end::Separator-->
-        <!--begin::Breadcrumb-->
-        <ul class="breadcrumb breadcrumb-separatorless fw-bold fs-7 my-1">
-          <!--begin::Item-->
-          <li class="breadcrumb-item text-muted">
-            <a href="/crafted/employee/employee-data" class="text-muted text-hover-primary">Employee</a>
-          </li>
-          <!--end::Item-->
-          <!--begin::Item-->
-          <li class="breadcrumb-item">
-            <span class="bullet bg-gray-300 w-5px h-2px"></span>
-          </li>
-          <!--end::Item-->
-          <!--begin::Item-->
-          <li class="breadcrumb-item text-dark">{{title}}</li>
-          <!--end::Item-->
-        </ul>
-        <!--end::Breadcrumb-->
-      </div>
-      <!--end::Page title-->
-    </div>
-    <!--end::Navbar-->
-    
-  </div>
+
   <ng-container *ngIf="showBC">
     <ng-container *ngIf="bc$ | async as _bc">
       <ng-container *ngIf="_bc.length > 0">
